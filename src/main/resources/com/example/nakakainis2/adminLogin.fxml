@@ -58,5 +58,11 @@
             </font>
         </Button>
 
+        <Button fx:id="btnBack" layoutX="888.0" layoutY="663.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="120.0" style="-fx-background-color: #cccccc; -fx-background-radius: 20;" text="Back" textFill="#003a00" onAction="#handleBack">
+            <font>
+                <Font name="Arial Bold" size="20.0" />
+            </font>
+        </Button>
+
     </children>
 </AnchorPane>

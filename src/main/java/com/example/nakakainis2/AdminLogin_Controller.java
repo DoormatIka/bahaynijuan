@@ -20,6 +20,9 @@ public class AdminLogin_Controller {
     private Button btnLogin;
 
     @FXML
+    private Button btnBack;
+
+    @FXML
     private Label lblUsername;
 
     @FXML
@@ -63,6 +66,17 @@ public class AdminLogin_Controller {
             lblError.setText("Invalid username or password");
         } catch (Exception e) {
             lblError.setText("Database error");
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    private void handleBack() {
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource("/com/example/nakakainis2/landingPage.fxml"));
+            Stage stage = (Stage) btnBack.getScene().getWindow();
+            stage.setScene(new Scene(root, 1500, 780));
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }

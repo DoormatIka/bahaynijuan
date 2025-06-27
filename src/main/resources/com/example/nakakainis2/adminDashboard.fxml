@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -138,10 +143,79 @@
         </AnchorPane>
         <!-- Main content panes for each section -->
         <AnchorPane fx:id="paneDashboard" layoutX="401.0" layoutY="230.0" prefHeight="400.0" prefWidth="1035.0" style="-fx-background-color: white; -fx-background-radius: 15; -fx-border-radius: 15; -fx-border-color: #059212;">
-            <Label text="Dashboard Content" layoutX="30" layoutY="30" style="-fx-font-size: 24px; -fx-text-fill: #059212;" />
+            <children>
+                <Label text="Dashboard Statistics" layoutX="30" layoutY="20" style="-fx-font-size: 24px; -fx-text-fill: #059212;" />
+                
+                <!-- Stats Cards -->
+                <AnchorPane layoutX="30" layoutY="60" prefHeight="80" prefWidth="200" style="-fx-background-color: #4CAF50; -fx-background-radius: 10;">
+                    <children>
+                        <Label text="Total Items" layoutX="10" layoutY="10" style="-fx-text-fill: white; -fx-font-size: 14px;"/>
+                        <Label fx:id="lblTotalItems" text="0" layoutX="10" layoutY="30" style="-fx-text-fill: white; -fx-font-size: 32px; -fx-font-weight: bold;"/>
+                    </children>
+                </AnchorPane>
+                
+                <AnchorPane layoutX="250" layoutY="60" prefHeight="80" prefWidth="200" style="-fx-background-color: #2196F3; -fx-background-radius: 10;">
+                    <children>
+                        <Label text="Total Quantity" layoutX="10" layoutY="10" style="-fx-text-fill: white; -fx-font-size: 14px;"/>
+                        <Label fx:id="lblTotalQuantity" text="0" layoutX="10" layoutY="30" style="-fx-text-fill: white; -fx-font-size: 32px; -fx-font-weight: bold;"/>
+                    </children>
+                </AnchorPane>
+                
+                <AnchorPane layoutX="470" layoutY="60" prefHeight="80" prefWidth="200" style="-fx-background-color: #FF9800; -fx-background-radius: 10;">
+                    <children>
+                        <Label text="Low Stock" layoutX="10" layoutY="10" style="-fx-text-fill: white; -fx-font-size: 14px;"/>
+                        <Label fx:id="lblLowStock" text="0" layoutX="10" layoutY="30" style="-fx-text-fill: white; -fx-font-size: 32px; -fx-font-weight: bold;"/>
+                    </children>
+                </AnchorPane>
+                
+                <AnchorPane layoutX="690" layoutY="60" prefHeight="80" prefWidth="200" style="-fx-background-color: #f44336; -fx-background-radius: 10;">
+                    <children>
+                        <Label text="Expiring Soon" layoutX="10" layoutY="10" style="-fx-text-fill: white; -fx-font-size: 14px;"/>
+                        <Label fx:id="lblExpiringSoonCount" text="0" layoutX="10" layoutY="30" style="-fx-text-fill: white; -fx-font-size: 32px; -fx-font-weight: bold;"/>
+                    </children>
+                </AnchorPane>
+                
+                <TextArea fx:id="inventoryTextArea" layoutX="30" layoutY="160" prefHeight="200" prefWidth="900" editable="false"/>
+            </children>
         </AnchorPane>
         <AnchorPane fx:id="paneInventory" layoutX="401.0" layoutY="230.0" prefHeight="400.0" prefWidth="1035.0" style="-fx-background-color: white; -fx-background-radius: 15; -fx-border-radius: 15; -fx-border-color: #059212;" visible="false">
-            <Label text="Inventory Content" layoutX="30" layoutY="30" style="-fx-font-size: 24px; -fx-text-fill: #059212;" />
+            <children>
+                <!-- Form for CRUD operations -->
+                <Label text="Item Name:" layoutX="20" layoutY="20"/>
+                <TextField fx:id="txtItemName" layoutX="20" layoutY="40" prefWidth="120"/>
+                
+                <Label text="Category:" layoutX="160" layoutY="20"/>
+                <TextField fx:id="txtCategory" layoutX="160" layoutY="40" prefWidth="100"/>
+                
+                <Label text="Quantity:" layoutX="280" layoutY="20"/>
+                <TextField fx:id="txtQuantity" layoutX="280" layoutY="40" prefWidth="80"/>
+                
+                <Label text="Location:" layoutX="380" layoutY="20"/>
+                <TextField fx:id="txtLocation" layoutX="380" layoutY="40" prefWidth="120"/>
+                
+                <Label text="Expiration:" layoutX="520" layoutY="20"/>
+                <DatePicker fx:id="dateExpiration" layoutX="520" layoutY="40" prefWidth="120"/>
+                
+                <!-- Action buttons -->
+                <Button fx:id="btnAdd" text="Add" layoutX="660" layoutY="40" onAction="#handleAddItem" style="-fx-background-color: #4CAF50; -fx-text-fill: white;"/>
+                <Button fx:id="btnUpdate" text="Update" layoutX="710" layoutY="40" onAction="#handleUpdateItem" style="-fx-background-color: #2196F3; -fx-text-fill: white;"/>
+                <Button fx:id="btnDelete" text="Delete" layoutX="780" layoutY="40" onAction="#handleDeleteItem" style="-fx-background-color: #f44336; -fx-text-fill: white;"/>
+                <Button fx:id="btnClear" text="Clear" layoutX="840" layoutY="40" onAction="#handleClearForm" style="-fx-background-color: #757575; -fx-text-fill: white;"/>
+                <Button fx:id="btnRefresh" text="Refresh" layoutX="890" layoutY="40" onAction="#handleRefreshData" style="-fx-background-color: #FF9800; -fx-text-fill: white;"/>
+                
+                <!-- Inventory Table -->
+                <TableView fx:id="inventoryTable" layoutX="20" layoutY="90" prefHeight="280" prefWidth="980">
+                    <columns>
+                        <TableColumn fx:id="colItemId" text="ID" prefWidth="50"/>
+                        <TableColumn fx:id="colItemName" text="Item Name" prefWidth="150"/>
+                        <TableColumn fx:id="colCategory" text="Category" prefWidth="100"/>
+                        <TableColumn fx:id="colQuantity" text="Quantity" prefWidth="80"/>
+                        <TableColumn fx:id="colLocation" text="Location" prefWidth="120"/>
+                        <TableColumn fx:id="colExpirationDate" text="Expiration" prefWidth="100"/>
+                        <TableColumn fx:id="colActions" text="Actions" prefWidth="120"/>
+                    </columns>
+                </TableView>
+            </children>
         </AnchorPane>
         <AnchorPane fx:id="paneManagement" layoutX="401.0" layoutY="230.0" prefHeight="400.0" prefWidth="1035.0" style="-fx-background-color: white; -fx-background-radius: 15; -fx-border-radius: 15; -fx-border-color: #059212;" visible="false">
             <Label text="Management Content" layoutX="30" layoutY="30" style="-fx-font-size: 24px; -fx-text-fill: #059212;" />
