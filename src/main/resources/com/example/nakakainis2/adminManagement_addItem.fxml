@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="780.0" prefWidth="1500.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.nakakainis2.AdminManagement_AddItem_Controller">
+    <children>
+        <AnchorPane layoutX="-11.0" prefHeight="780.0" prefWidth="350.0" style="-fx-background-color: DEF2CE;">
+            <children>
+                <ImageView fx:id="imgLogo" fitHeight="99.0" fitWidth="331.0" layoutX="20.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@logoo.jpg" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="26.0" fitWidth="24.0" layoutX="80.0" layoutY="260.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@INVEN.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="28.0" fitWidth="29.0" layoutX="80.0" layoutY="380.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@map.png" />
+                    </image>
+                </ImageView>
+                <Button fx:id="btnLogout" layoutX="5.0" layoutY="725.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="205.0" style="-fx-background-color: transparent; -fx-background-radius: 15; -fx-text-fill: #059212;" text="Log out" textFill="#059212">
+                    <font>
+                        <Font name="Arial Bold" size="16.0" />
+                    </font>
+                </Button>
+                <ImageView fitHeight="25.0" fitWidth="27.0" layoutX="35.0" layoutY="731.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@logout.png" />
+                    </image>
+                </ImageView>
+                <Button fx:id="btnDashboard" layoutX="47.0" layoutY="190.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="266.0" style="-fx-background-color: transparent; -fx-background-radius: 15; -fx-text-fill: ;" textFill="#247e2b">
+                    <font>
+                        <Font name="Arial Bold" size="16.0" />
+                    </font>
+                </Button>
+                <Button fx:id="btnInventory" layoutX="47.0" layoutY="250.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="266.0" style="-fx-background-color: TRANSPARENT; -fx-background-radius: 15; -fx-text-fill: ;" textFill="#247e2b">
+                    <font>
+                        <Font name="Arial Bold" size="16.0" />
+                    </font>
+                </Button>
+                <Button fx:id="btnManagement" layoutX="48.0" layoutY="310.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="266.0" style="-fx-background-color: #059212; -fx-background-radius: 15; -fx-text-fill: ;" textFill="#247e2b">
+                    <font>
+                        <Font name="Arial Bold" size="16.0" />
+                    </font>
+                </Button>
+                <Button fx:id="btnMap" layoutX="48.0" layoutY="370.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="266.0" style="-fx-background-color: TRANSPARENT; -fx-background-radius: 15; -fx-text-fill: ;" textFill="#247e2b">
+                    <font>
+                        <Font name="Arial Bold" size="16.0" />
+                    </font>
+                </Button>
+                <Button fx:id="btnReports" layoutX="48.0" layoutY="430.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="266.0" style="-fx-background-color: transparent; -fx-background-radius: 15; -fx-text-fill: ;" textFill="#247e2b">
+                    <font>
+                        <Font name="Arial Bold" size="16.0" />
+                    </font>
+                </Button>
+                <Label layoutX="128.0" layoutY="205.0" style="-fx-text-fill: #059212;" text="DASHBOARD" textFill="WHITE">
+                    <font>
+                        <Font name="Arial Bold" size="16.0" />
+                    </font>
+                </Label>
+                <Label layoutX="128.0" layoutY="263.0" style="-fx-text-fill: #059212;" text="INVENTORY">
+                    <font>
+                        <Font name="Arial Bold" size="16.0" />
+                    </font>
+                </Label>
+                <Label layoutX="128.0" layoutY="323.0" style="-fx-text-fill: white;" text="MANAGEMENT">
+                    <font>
+                        <Font name="Arial Bold" size="16.0" />
+                    </font>
+                </Label>
+                <Label layoutX="128.0" layoutY="383.0" style="-fx-text-fill: #059212;" text="MAP">
+                    <font>
+                        <Font name="Arial Bold" size="16.0" />
+                    </font>
+                </Label>
+                <Label layoutX="128.0" layoutY="443.0" style="-fx-text-fill: #059212;" text="REPORTS">
+                    <font>
+                        <Font name="Arial Bold" size="16.0" />
+                    </font>
+                </Label>
+                <ImageView fitHeight="26.0" fitWidth="29.0" layoutX="80.0" layoutY="200.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@dashboard.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="26.0" fitWidth="29.0" layoutX="80.0" layoutY="440.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@reports.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="26.0" fitWidth="35.0" layoutX="80.0" layoutY="320.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@bgManagement.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </AnchorPane>
+        <Label fx:id="lblManagement" layoutX="401.0" layoutY="50.0" prefHeight="80.0" prefWidth="468.0" text="Management" textFill="#059212">
+            <font>
+                <Font name="Arial Bold" size="70.0" />
+            </font>
+        </Label>
+        <Label layoutX="404.0" layoutY="143.0" text="Record new items in the inventory or remove them after emptying out the shelves.">
+            <font>
+                <Font name="Arial Bold" size="20.0" />
+            </font>
+        </Label>
+        <AnchorPane layoutX="404.0" layoutY="232.0" prefHeight="470.0" prefWidth="463.0" style="-fx-background-color: #def2ce; -fx-background-radius: 20; -fx-border-color: black; -fx-border-radius: 20;">
+            <children>
+                <ComboBox fx:id="dbCategory" layoutX="82.0" layoutY="207.0" prefHeight="38.0" prefWidth="295.0" promptText="Select Category" style="-fx-background-color: FFFFFF; -fx-background-radius: 8;" />
+                <TextField fx:id="tfItemName" layoutX="82.0" layoutY="129.0" prefHeight="38.0" prefWidth="295.0" style="-fx-background-radius: 8;" />
+                <TextField fx:id="tfQuantity" layoutX="81.0" layoutY="295.0" prefHeight="38.0" prefWidth="295.0" style="-fx-background-radius: 8;" />
+                <Text fx:id="lblItemName" layoutX="190.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Item Name">
+                    <font>
+                        <Font name="Arial Bold" size="16.0" />
+                    </font>
+                </Text>
+                <Text fx:id="lblCategory" layoutX="190.0" layoutY="195.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Category">
+                    <font>
+                        <Font name="Arial Bold" size="16.0" />
+                    </font>
+                </Text>
+                <Text fx:id="lblQuantity" layoutX="195.0" layoutY="283.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quantity">
+                    <font>
+                        <Font name="Arial Bold" size="16.0" />
+                    </font>
+                </Text>
+                <Button fx:id="btnRecord" onAction="#handleRecordButtonAction" layoutX="124.0" layoutY="386.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="216.0" style="-fx-background-color: #00860b; -fx-border-radius: 10; -fx-background-radius: 10; -fx-border-color: ;" text="RECORD" textFill="#def2ce">
+                    <font>
+                        <Font name="Arial Bold" size="14.0" />
+                    </font>
+                </Button>
+                <Label fx:id="lblRecord" layoutX="148.0" layoutY="42.0" prefHeight="23.0" prefWidth="180.0" text="Record New Item">
+                    <font>
+                        <Font name="Arial Bold" size="20.0" />
+                    </font>
+                </Label>
+            </children>
+            <effect>
+                <DropShadow>
+                    <color>
+                        <Color red="0.4431372582912445" green="0.9176470637321472" blue="0.45098039507865906" />
+                    </color>
+                </DropShadow>
+            </effect>
+        </AnchorPane>
+        <AnchorPane layoutX="962.0" layoutY="229.0" prefHeight="470.0" prefWidth="463.0" style="-fx-background-color: #def2ce; -fx-background-radius: 20; -fx-border-color: black; -fx-border-radius: 20;">
+            <children>
+                <ComboBox fx:id="dpShelfCode" layoutX="87.0" layoutY="138.0" prefHeight="38.0" prefWidth="295.0" style="-fx-background-color: FFFFFF; -fx-background-radius: 8;" />
+                <ComboBox fx:id="dpShelfLayer" layoutX="87.0" layoutY="241.0" prefHeight="38.0" prefWidth="295.0" style="-fx-background-color: FFFFFF; -fx-background-radius: 8;" />
+                <Text fx:id="lblShelfCode" layoutX="190.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Shelf Code">
+                    <font>
+                        <Font name="Arial Bold" size="16.0" />
+                    </font>
+                </Text>
+                <Text fx:id="lblShelfLayer" layoutX="190.0" layoutY="225.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Shelf Layer">
+                    <font>
+                        <Font name="Arial Bold" size="16.0" />
+                    </font>
+                </Text>
+                <Button fx:id="btnRemove" layoutX="132.0" layoutY="335.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="216.0" style="-fx-background-color: #9F0B0B; -fx-border-radius: 10; -fx-background-radius: 10; -fx-border-color: ;" text="REMOVE" textFill="#def2ce">
+                    <font>
+                        <Font name="Arial Bold" size="14.0" />
+                    </font>
+                </Button>
+                <Label fx:id="lblRemove" layoutX="129.0" layoutY="42.0" prefHeight="23.0" prefWidth="242.0" text="Remove from Inventory">
+                    <font>
+                        <Font name="Arial Bold" size="20.0" />
+                    </font>
+                </Label>
+            </children>
+            <effect>
+                <DropShadow>
+                    <color>
+                        <Color red="0.4431372582912445" green="0.9176470637321472" blue="0.45098039507865906" />
+                    </color>
+                </DropShadow>
+            </effect>
+        </AnchorPane>
+        <AnchorPane fx:id="modalOverlayPane" layoutY="-1.0" managed="false" opacity="0.27" prefHeight="782.0" prefWidth="1503.0" style="-fx-background-color: #003A00;" visible="false" />
+        <AnchorPane fx:id="addItemModalPane" layoutX="537.0" layoutY="114.0" managed="false" prefHeight="608.0" prefWidth="673.0" style="-fx-background-color: #DEF2CE; -fx-background-radius: 30; -fx-border-color: black; -fx-border-radius: 30;" visible="false">
+            <children>
+                <Text fx:id="modalLblInventory" fill="#003a00" layoutX="80.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="INVENTORY MANAGEMENT" textAlignment="CENTER" wrappingWidth="525.3619995117188">
+                    <font>
+                        <Font name="Arial Bold" size="32.0" />
+                    </font>
+                </Text>
+                <TextField fx:id="modalTfItemName" layoutX="60.0" layoutY="200.0" prefHeight="40.0" prefWidth="255.0" style="-fx-background-radius: 10;" />
+                <AnchorPane layoutY="104.0" prefHeight="36.0" prefWidth="673.0" style="-fx-background-color: #003A00;">
+                    <children>
+                        <Text fx:id="modalLblAddItem" fill="WHITE" layoutX="263.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ADD NEW ITEM:" textAlignment="CENTER">
+                            <font>
+                                <Font name="Arial Bold" size="20.0" />
+                            </font>
+                        </Text>
+                    </children>
+                </AnchorPane>
+                <AnchorPane layoutX="1.0" layoutY="366.0" prefHeight="36.0" prefWidth="673.0" style="-fx-background-color: #003A00;">
+                    <children>
+                        <Text fill="WHITE" layoutX="236.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0">
+                            <font>
+                                <Font name="Arial Bold" size="24.0" />
+                            </font>
+                        </Text>
+                    </children>
+                </AnchorPane>
+                <TextField fx:id="modalTfQuantity" layoutX="370.0" layoutY="290.0" prefHeight="40.0" prefWidth="255.0" style="-fx-background-radius: 10;" />
+                <TextField fx:id="modalTfExpirationDate" layoutX="370.0" layoutY="200.0" prefHeight="40.0" prefWidth="255.0" style="-fx-background-radius: 10;" />
+                <Text fx:id="modalLblItemName" layoutX="65.0" layoutY="190.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Item Name">
+                    <font>
+                        <Font name="Arial Bold" size="18.0" />
+                    </font>
+                </Text>
+                <Text fx:id="modalLblCategory" layoutX="65.0" layoutY="280.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Category">
+                    <font>
+                        <Font name="Arial Bold" size="18.0" />
+                    </font>
+                </Text>
+                <Text fx:id="modalLblExpirationDate" layoutX="375.0" layoutY="190.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Expiration date">
+                    <font>
+                        <Font name="Arial Bold" size="18.0" />
+                    </font>
+                </Text>
+                <Text fx:id="modalLblQuantity" layoutX="375.0" layoutY="280.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quantity">
+                    <font>
+                        <Font name="Arial Bold" size="18.0" />
+                    </font>
+                </Text>
+                <Button fx:id="btnConfirm" onAction="#handleConfirmButtonAction" layoutX="141.0" layoutY="489.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="187.0" style="-fx-background-color: #059212; -fx-border-radius: 10; -fx-background-radius: 10; -fx-border-color: ;" text="CONFIRM" textFill="#def2ce">
+                    <font>
+                        <Font name="Arial Bold" size="14.0" />
+                    </font>
+                </Button>
+                <Button fx:id="btnReturn" onAction="#handleReturnButtonAction" layoutX="365.0" layoutY="489.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="187.0" style="-fx-background-color: #003A00; -fx-border-radius: 10; -fx-background-radius: 10; -fx-border-color: ;" text="RETURN" textFill="#def2ce">
+                    <font>
+                        <Font name="Arial Bold" size="14.0" />
+                    </font>
+                </Button>
+                <Text layoutX="226.0" layoutY="452.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add this item to inventory?">
+                    <font>
+                        <Font name="Arial Bold" size="18.0" />
+                    </font>
+                </Text>
+                <ComboBox fx:id="modalDpCategory" layoutX="60.0" layoutY="290.0" prefHeight="37.0" prefWidth="255.0" promptText="Select Category" style="-fx-background-color: FFFFFF; -fx-background-radius: 8;" />
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

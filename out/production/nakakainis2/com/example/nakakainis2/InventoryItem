@@ -1,0 +1,33 @@
+package com.example.bahaynijuan;
+
+public class InventoryItem {
+    private int itemId;
+    private String itemName;
+    private String category;
+    private int quantity;
+    private String location;
+    private String expirationDate;
+
+    public InventoryItem(int itemId, String itemName, String category, int quantity, String location, String expirationDate) {
+        this.itemId = itemId;
+        this.itemName = itemName;
+        this.category = category;
+        this.quantity = quantity;
+        this.location = location;
+        this.expirationDate = expirationDate;
+    }
+
+    // Overloaded constructor for backward compatibility (if needed)
+    public InventoryItem(String itemName, String category, int quantity, String location, String expirationDate) {
+        this(-1, itemName, category, quantity, location, expirationDate);
+    }
+
+    public int getItemId() { return itemId; }
+    public void setItemId(int itemId) { this.itemId = itemId; }
+
+    public String getItemName() { return itemName; }
+    public String getCategory() { return category; }
+    public int getQuantity() { return quantity; }
+    public String getLocation() { return location; }
+    public String getExpirationDate() { return expirationDate; }
+}

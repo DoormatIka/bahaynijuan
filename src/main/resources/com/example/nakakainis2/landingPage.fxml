@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="780.0" prefWidth="1500.0" style="-fx-background-color: def2ce;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.nakakainis2.Landing_Controller">
+    <children>
+        <ImageView fx:id="imageLogo1" fitHeight="156.0" fitWidth="670.0" layoutX="36.0" layoutY="99.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@logo5.png" />
+            </image>
+        </ImageView>
+        <ImageView fx:id="image" fitHeight="278.0" fitWidth="665.0" layoutX="41.0" layoutY="268.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@text.png" />
+            </image>
+        </ImageView>
+        <ImageView fitHeight="863.0" fitWidth="754.0" layoutX="746.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@image1.png" />
+            </image>
+        </ImageView>
+        <VBox layoutX="70.0" layoutY="633.0" spacing="20" AnchorPane.leftAnchor="70.0" AnchorPane.bottomAnchor="60.0">
+            <children>
+                <Button fx:id="btnDashboard" text="DASHBOARD" onAction="#handleDashboard" style="-fx-background-color: #003a00; -fx-text-fill: white; -fx-font-size: 18px; -fx-font-family: 'Arial Bold'; -fx-background-radius: 15; -fx-padding: 12 40; -fx-cursor: hand;">
+                    <font>
+                        <Font name="Arial Bold" size="18.0" />
+                    </font>
+                </Button>
+                <Button fx:id="btnDashboard2" text="ADMIN LOGIN" onAction="#handleAdminLogin" style="-fx-background-color: #003a00; -fx-text-fill: white; -fx-font-size: 18px; -fx-font-family: 'Arial Bold'; -fx-background-radius: 15; -fx-padding: 12 40; -fx-cursor: hand;">
+                    <font>
+                        <Font name="Arial Bold" size="18.0" />
+                    </font>
+                </Button>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

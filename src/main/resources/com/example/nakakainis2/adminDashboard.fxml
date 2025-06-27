@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="780.0" prefWidth="1500.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.nakakainis2.AdminDashboard_Controller">
+    <children>
+        <AnchorPane layoutX="-11.0" prefHeight="780.0" prefWidth="350.0" style="-fx-background-color: DEF2CE;">
+            <children>
+                <ImageView fx:id="imgLogo" fitHeight="99.0" fitWidth="331.0" layoutX="20.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@logoo.jpg" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="26.0" fitWidth="24.0" layoutX="80.0" layoutY="260.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@INVEN.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="26.0" fitWidth="35.0" layoutX="80.0" layoutY="320.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@mngmnt.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="28.0" fitWidth="29.0" layoutX="80.0" layoutY="380.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@map.png" />
+                    </image>
+                </ImageView>
+                <Button fx:id="btnLogout" layoutX="5.0" layoutY="725.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="205.0" style="-fx-background-color: transparent; -fx-background-radius: 15; -fx-text-fill: #059212;" text="Log out" textFill="#059212" onAction="#handleLogout">
+                    <font>
+                        <Font name="Arial Bold" size="16.0" />
+                    </font>
+                </Button>
+                <ImageView fitHeight="25.0" fitWidth="31.0" layoutX="80.0" layoutY="440.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@reports.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="25.0" fitWidth="27.0" layoutX="35.0" layoutY="731.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@logout.png" />
+                    </image>
+                </ImageView>
+                <Label fx:id="navDashboard" layoutX="128.0" layoutY="205.0" text="DASHBOARD" textFill="WHITE" style="-fx-cursor: hand;" onMouseClicked="#handleDashboardLabel">
+                    <font>
+                        <Font name="Arial Bold" size="16.0" />
+                    </font>
+                </Label>
+                <Label fx:id="navInventory" layoutX="128.0" layoutY="263.0" style="-fx-text-fill: #059212; -fx-cursor: hand;" text="INVENTORY" onMouseClicked="#handleInventoryLabel">
+                    <font>
+                        <Font name="Arial Bold" size="16.0" />
+                    </font>
+                </Label>
+                <Label fx:id="navManagement" layoutX="128.0" layoutY="323.0" style="-fx-text-fill: #059212; -fx-cursor: hand;" text="MANAGEMENT" onMouseClicked="#handleManagementLabel">
+                    <font>
+                        <Font name="Arial Bold" size="16.0" />
+                    </font>
+                </Label>
+                <Label fx:id="navMap" layoutX="128.0" layoutY="383.0" style="-fx-text-fill: #059212; -fx-cursor: hand;" text="MAP" onMouseClicked="#handleMapLabel">
+                    <font>
+                        <Font name="Arial Bold" size="16.0" />
+                    </font>
+                </Label>
+                <Label fx:id="navReports" layoutX="128.0" layoutY="443.0" style="-fx-text-fill: #059212; -fx-cursor: hand;" text="REPORTS" onMouseClicked="#handleReportsLabel">
+                    <font>
+                        <Font name="Arial Bold" size="16.0" />
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+        <Label fx:id="lblDashboard" layoutX="401.0" layoutY="50.0" prefHeight="75.0" prefWidth="382.0" text="Dashboard" textFill="#059212">
+            <font>
+                <Font name="Arial Bold" size="70.0" />
+            </font>
+        </Label>
+        <Label layoutX="404.0" layoutY="143.0" prefHeight="26.0" prefWidth="1039.0" text="Welcome to your dashboard! Here you can get a quick overview of your relief goods management system.">
+            <font>
+                <Font name="Arial Bold" size="20.0" />
+            </font>
+        </Label>
+        <AnchorPane fx:id="lblTotalGoods" layoutX="402.0" layoutY="255.0" prefHeight="268.0" prefWidth="302.0" style="-fx-background-radius: 15; -fx-background-color: #55A326; -fx-border-radius: 15; -fx-border-color: black;">
+            <children>
+                <Label layoutX="25.0" layoutY="18.0" text="Total Goods" textFill="WHITE">
+                    <font>
+                        <Font name="Arial Bold" size="22.0" />
+                    </font>
+                </Label>
+            </children>
+            <effect>
+                <DropShadow>
+                    <color>
+                        <Color red="0.03921568766236305" green="0.6627451181411743" blue="0.019607843831181526" />
+                    </color>
+                </DropShadow>
+            </effect>
+        </AnchorPane>
+        <AnchorPane fx:id="lblExpiringSoon" layoutX="768.0" layoutY="255.0" prefHeight="269.0" prefWidth="302.0" style="-fx-background-radius: 15; -fx-background-color: #55A326; -fx-border-radius: 15; -fx-border-color: black;">
+            <children>
+                <Label layoutX="26.0" layoutY="18.0" text="Expiring Soon" textFill="WHITE">
+                    <font>
+                        <Font name="Arial Bold" size="22.0" />
+                    </font>
+                </Label>
+            </children>
+            <effect>
+                <DropShadow>
+                    <color>
+                        <Color red="0.03921568766236305" green="0.6627451181411743" blue="0.019607843831181526" />
+                    </color>
+                </DropShadow>
+            </effect>
+        </AnchorPane>
+        <AnchorPane fx:id="lblRecentDonation" layoutX="1134.0" layoutY="255.0" prefHeight="269.0" prefWidth="302.0" style="-fx-background-radius: 15; -fx-background-color: #55A326; -fx-border-color: black; -fx-border-radius: 15;">
+            <children>
+                <Label layoutX="27.0" layoutY="18.0" text="Recent Donations" textFill="WHITE">
+                    <font>
+                        <Font name="Arial Bold" size="22.0" />
+                    </font>
+                </Label>
+            </children>
+            <effect>
+                <DropShadow>
+                    <color>
+                        <Color red="0.03921568766236305" green="0.6627451181411743" blue="0.019607843831181526" />
+                    </color>
+                </DropShadow>
+            </effect>
+        </AnchorPane>
+        <AnchorPane fx:id="mainContent" layoutX="401.0" layoutY="230.0" prefHeight="400.0" prefWidth="1035.0" style="-fx-background-color: white; -fx-background-radius: 15; -fx-border-radius: 15; -fx-border-color: #059212;">
+            <!-- Content will be loaded here -->
+        </AnchorPane>
+        <!-- Main content panes for each section -->
+        <AnchorPane fx:id="paneDashboard" layoutX="401.0" layoutY="230.0" prefHeight="400.0" prefWidth="1035.0" style="-fx-background-color: white; -fx-background-radius: 15; -fx-border-radius: 15; -fx-border-color: #059212;">
+            <Label text="Dashboard Content" layoutX="30" layoutY="30" style="-fx-font-size: 24px; -fx-text-fill: #059212;" />
+        </AnchorPane>
+        <AnchorPane fx:id="paneInventory" layoutX="401.0" layoutY="230.0" prefHeight="400.0" prefWidth="1035.0" style="-fx-background-color: white; -fx-background-radius: 15; -fx-border-radius: 15; -fx-border-color: #059212;" visible="false">
+            <Label text="Inventory Content" layoutX="30" layoutY="30" style="-fx-font-size: 24px; -fx-text-fill: #059212;" />
+        </AnchorPane>
+        <AnchorPane fx:id="paneManagement" layoutX="401.0" layoutY="230.0" prefHeight="400.0" prefWidth="1035.0" style="-fx-background-color: white; -fx-background-radius: 15; -fx-border-radius: 15; -fx-border-color: #059212;" visible="false">
+            <Label text="Management Content" layoutX="30" layoutY="30" style="-fx-font-size: 24px; -fx-text-fill: #059212;" />
+        </AnchorPane>
+        <AnchorPane fx:id="paneMap" layoutX="401.0" layoutY="230.0" prefHeight="400.0" prefWidth="1035.0" style="-fx-background-color: white; -fx-background-radius: 15; -fx-border-radius: 15; -fx-border-color: #059212;" visible="false">
+            <Label text="Map Content" layoutX="30" layoutY="30" style="-fx-font-size: 24px; -fx-text-fill: #059212;" />
+        </AnchorPane>
+        <AnchorPane fx:id="paneReports" layoutX="401.0" layoutY="230.0" prefHeight="400.0" prefWidth="1035.0" style="-fx-background-color: white; -fx-background-radius: 15; -fx-border-radius: 15; -fx-border-color: #059212;" visible="false">
+            <Label text="Reports Content" layoutX="30" layoutY="30" style="-fx-font-size: 24px; -fx-text-fill: #059212;" />
+        </AnchorPane>
+    </children>
+</AnchorPane>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.StackPane?>
+<BorderPane prefHeight="780.0" prefWidth="1500.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.nakakainis2.AdminMainController">
+    <left>
+        <VBox spacing="20.0" style="-fx-background-color: #003a00; -fx-padding: 40 10 40 10;">
+            <Button text="Dashboard" fx:id="btnDashboard" onAction="#showDashboard" style="-fx-background-radius: 10; -fx-text-fill: white; -fx-background-color: #005a00; -fx-font-size: 16px;" />
+            <Button text="Inventory" fx:id="btnInventory" onAction="#showInventory" style="-fx-background-radius: 10; -fx-text-fill: white; -fx-background-color: #005a00; -fx-font-size: 16px;" />
+            <Button text="Reports" fx:id="btnReports" onAction="#showReports" style="-fx-background-radius: 10; -fx-text-fill: white; -fx-background-color: #005a00; -fx-font-size: 16px;" />
+        </VBox>
+    </left>
+    <center>
+        <StackPane fx:id="mainContent" />
+    </center>
+</BorderPane>
